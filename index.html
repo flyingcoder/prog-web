@@ -6,23 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/app.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.css">
 </head>
 <body>
 	<div class="container" id="icons">
 		<div class="row">
 		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="fer"><img src="images/im1.jpg" class="img-responsive"></a>
+		      <a href="#" id="fer"><img src="images/fer.gif" class="img-responsive"></a>
 		    </div>
 		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="rol"><img src="images/im2.jpg " class="img-responsive"></a>
+		      <a href="#" id="rol"><img src="images/rol.gif " class="img-responsive"></a>
 		    </div>
 		</div>
 	 	<div class="row">
 		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="car-prob"><img src="images/im3.png" class="img-responsive"></a>
+		      <a href="#" id="car-prob"><img src="images/car.gif" class="img-responsive"></a>
 		    </div>
 		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="carou"><img src="images/im4.jpg" class="img-responsive"></a>
+		      <a href="#" id="carou"><img src="images/giphy.gif" class="img-responsive"></a>
 		    </div>
 		</div>
 	</div>
@@ -40,25 +42,25 @@
 			        Ans: a
 
 		</p>
-        <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel3" role="button">Learn more »</a></p>
       </div>
     </div>
 
-    <div class="jumbotron" id="roller-coaster" style="display: none">
+    <div class="" id="roller-coaster" style="display: none">
       <div class="container">
         <h1>Roller Coaster Problem</h1>
         <p>The function f(x) = 2 cos x + sin 2x is in the form of a roller coaster. (a) What is the height of the cart of the roller coaster from the horizontal line when x = -π/2? a) 1/2 b) 0 c) √3/2 d) √2/2 Ans b . (b) What is the height of the cart of a roller coaster from the horizontal line when x = 0. a. 2 b. 0 c. 1/2  d. 3  Ans. a  </p>
-        <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel2" role="button">Learn more »</a></p>
       </div>
     </div>
 
-    <div class="jumbotron" id="car" style="display: none">
+    <div class="" id="car" style="display: none">
       <div class="container">
         <h1>Car Race Problem</h1>
         <p>The car race has the shape of an ellipse, the length of the major axis from the center to the vertex is 3 m while the length of the minor axis is 2 m.  Find the location of the car of the function x(t) = a cos t and y(t) = b sin t (a) when t = 0. a) x = 0 ,y = 3    b) x = 1, y = 0   c) x = 0, y = 1   d) x=3, y= 0
 			ans: d (b) when t = 30 a) x = 3√3/2, y = 1  b) x = -3√3/2 , y = 1  c) x = 3√3/2, y = -1 d) x = -3√3/2, y = -1  Ans. a 
   		</p>
-        <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel1" role="button">Learn more »</a></p>
       </div>
     </div>
 
@@ -136,6 +138,46 @@
 					});
 				}
 			});
+
+
+			$('#car-prob').click(function (event) {
+				event.preventDefault();
+				$('#icons').hide();
+				$('#car').show();
+			});
+
+			$('#acarousel1').click(function (event) {
+				event.preventDefault();
+				$('#car').hide();
+				$('#icons').show();
+			});
+
+
+			$('#rol').click(function (event) {
+				event.preventDefault();
+				$('#icons').hide();
+				$('#roller-coaster').show();
+			});
+
+			$('#acarousel2').click(function (event) {
+				event.preventDefault();
+				$('#roller-coaster').hide();
+				$('#icons').show();
+			});
+
+
+			$('#fer').click(function (event) {
+				event.preventDefault();
+				$('#icons').hide();
+				$('#ferris-wheel').show();
+			});
+
+			$('#acarousel3').click(function (event) {
+				event.preventDefault();
+				$('#ferris-wheel').hide();
+				$('#icons').show();
+			});
+
 		});
 	</script>
 </footer>
