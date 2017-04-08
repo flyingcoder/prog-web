@@ -4,3 +4,25 @@ body {
 	overflow-x: hidden;
 }
 
+.home-images {
+	padding:0 20px;
+	 img{
+		width: 450px;
+		height: 293px;
+		margin:20px;
+	}
+}
+.container{
+	padding-top:50%;
+}
+
+@media (min-width:378px){
+	.home-images{
+		img{
+		margin:20px;
+	}
+	}
+}
+.container{
+	padding-top:50%;
+}
