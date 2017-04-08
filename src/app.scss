@@ -12,17 +12,34 @@ body {
 		margin:20px;
 	}
 }
-.container{
-	padding-top:50%;
+
+#icons {
+	overflow: hidden;
 }
 
-@media (min-width:378px){
-	.home-images{
-		img{
-		margin:20px;
+@media (min-width:368px){
+	#icons {
+		padding-top:50%;
 	}
+
+	#carousel {
+		h1 {
+			font-size: 85px;
+    		padding-top: 20%;
+		}
+		p {
+			font-size: 40px;
+		}
+		a {
+			padding: 24px 63px;
+		    font-size: 46px;
+		    margin-top: 50px;
+		}
 	}
 }
-.container{
-	padding-top:50%;
+
+@media (min-width:1200px){
+	#icons {
+		padding-top:1%;
+	}
 }
