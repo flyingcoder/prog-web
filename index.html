@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css">
 	<link rel="stylesheet" type="text/css" href="dist/app.css">
 </head>
 <body>
@@ -63,17 +65,43 @@
     <div id="carousel" style="display: none">
       <div class="container">
         <h1>Carousel Problem</h1>
-        <p>The carousel at the Mathematics Park in Iligan City takes 7 minutes to make one full rotation. The minimum and maximum height of horse ride above the ground can be modelled by h(t) = 3(sin 2π/7)(t - 1.75) + 4, where t is time in minutes. What is the height of horse ride if (a) t = 3 minutes? a) 4 ft.    b) 3 ft.    c) 2 ft.    d) 1 ft.    ans: a
-			(b) t =  4 minutes ?
-    		a) 3.1 ft.  b) 4.1 ft.  c) 5.1 ft.  d) 6.1 ft.  ans: b
+        <p>The carousel at the Mathematics Park in Iligan City takes 7 minutes to make one full rotation. The minimum and maximum height of horse ride above the ground can be modelled by h(t) = 3(sin 2π/7)(t - 1.75) + 4,</p>
+        <p>where t is time in minutes. What is the height of horse ride if t = 3 minutes?</p>
+		<div class="btn-group btn-group-vertical" data-toggle="buttons">
+	        <label class="btn active">
+	          <input type="radio" name='carousel_a' value="a" checked>
+	          	<i class="fa fa-circle-o fa-2x"></i>
+	          	<i class="fa fa-dot-circle-o fa-2x"></i> 
+	          	<span>a) 4 ft</span>
+	        </label>
+	        <label class="btn">
+	          <input type="radio" name='carousel_a' value="b">
+	          	<i class="fa fa-circle-o fa-2x"></i>
+	          	<i class="fa fa-dot-circle-o fa-2x"></i>
+	          	<span>b) 3 ft</span>
+	        </label>
+	        <label class="btn">
+	          <input type="radio" name='carousel_a' value="c">
+	          	<i class="fa fa-circle-o fa-2x"></i>
+	          	<i class="fa fa-dot-circle-o fa-2x"></i>
+	          	<span>c) 2 ft</span>
+	        </label>
+	        <label class="btn">
+	          <input type="radio" name='carousel_a' value="d">
+	          	<i class="fa fa-circle-o fa-2x"></i>
+	          	<i class="fa fa-dot-circle-o fa-2x"></i>
+	          	<span>d) 1 ft</span>
+	        </label>
+	    </div>
 		</p>
-        <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel" role="button">Learn more »</a></p>
+        <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel" role="button">Submit Answer</a></p>
       </div>
     </div>
 </body>
 <footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.js"></script>
 	<script type="text/javascript">
 		$(function () {
 			$('#car').hide();
@@ -89,8 +117,24 @@
 
 			$('#acarousel').click(function (event) {
 				event.preventDefault();
-				$('#carousel').hide();
-				$('#icons').show();
+				var carousel_a = $("input:radio[name=carousel_a]:checked").val();
+				if(carousel_a == 'a'){
+					swal({
+						title: 'Sweet!',
+						type: 'success'
+					}).then(function () {
+						$('#carousel').hide();
+						$('#icons').show();
+					});
+				} else {
+					swal({
+						title: 'Oops!',
+						type: 'error'
+					}).then(function () {
+						$('#carousel').hide();
+						$('#icons').show();
+					});
+				}
 			});
 		});
 	</script>
