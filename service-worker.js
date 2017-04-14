@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var cacheName = 'math-park-1';
+var cacheName = 'math-park-2';
 var filesToCache = [
   './',
   './index.html',
