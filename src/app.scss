@@ -8,9 +8,9 @@ body {
 .home-images {
 	padding:0 20px;
 	 img{
-		width: 450px;
-		height: 293px;
-		margin:20px;
+		width: 150px;
+		height: 100px;
+		margin-bottom:20px;
 	}
 }
 
@@ -19,32 +19,30 @@ body {
 }
 
 @media (min-width:368px){
-	body {
-		font-size: 40px;
-	}
 
 	#icons {
-		padding-top:50%;
+		padding-top:30%;
 	}
 
 	#carousel {
 		h1 {
-			font-size: 85px;
-    		padding-top: 20%;
+			font-size: 30px;
+		    padding-top: 10%;
+		    text-align: center;
 		}
 		p {
-			font-size: 40px;
+			font-size: 20px;
 		}
 		a {
-			padding: 24px 63px;
-		    font-size: 46px;
-		    margin-top: 50px;
+			padding: 10px 15px;
+		    font-size: 20px;
+		    margin-top: 30px;
 		}
 	}
 
 
 	.fa-2x {
-		font-size: 3em;
+		font-size: 20px;
 	}
 }
 
@@ -57,9 +55,9 @@ body {
 label.btn {
 	outline: none !important;
 		span {
-	  	font-size: 3em;
-		line-height: 1.2;
-		padding-left: 50px;
+	  	font-size: 20px;
+	    line-height: 1.2;
+	    padding-left: 15px;
 		&:hover,
 		&:focus,
 		&:active {

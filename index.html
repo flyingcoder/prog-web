@@ -1,45 +1,81 @@
+<!--
+ Copyright 2016 Google Inc.
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+      http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css">
-	<link rel="stylesheet" type="text/css" href="dist/app.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <title>Math Park</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
+
+  <!-- TODO add manifest here -->
+  <link rel="icon" type="image/png" href="images/icon.png">
+   <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Math Park">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152bb.png">
+  
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144bb.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
-	<div class="container" id="icons">
-		<div class="row">
-		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="fer"><img src="images/im1.jpg" class="img-responsive"></a>
-		    </div>
-		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="rol"><img src="images/im2.jpg " class="img-responsive"></a>
-		    </div>
-		</div>
-	 	<div class="row">
-		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="car-prob"><img src="images/im3.png" class="img-responsive"></a>
-		    </div>
-		    <div class="col-md-6 home-images col-xs-6">
-		      <a href="#" id="carou"><img src="images/im4.jpg" class="img-responsive"></a>
-		    </div>
-		</div>
-	</div>
+  <div class="container" id="icons" style="display: none">
+    <h1 style="text-align: center;padding-bottom: 50px;">Math Park</h1>
+    <div class="row">
+        <div class="col-md-6 home-images col-xs-6">
+          <a href="#" id="fer"><img src="images/im1.jpg" class="img-responsive"></a>
+        </div>
+        <div class="col-md-6 home-images col-xs-6">
+          <a href="#" id="rol"><img src="images/im2.jpg " class="img-responsive"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 home-images col-xs-6">
+          <a href="#" id="car-prob"><img src="images/im3.png" class="img-responsive"></a>
+        </div>
+        <div class="col-md-6 home-images col-xs-6">
+          <a href="#" id="carou"><img src="images/im4.jpg" class="img-responsive"></a>
+        </div>
+    </div>
+  </div>
 
-	<div class="jumbotron" id="ferris-wheel" style="display: none">
+  <div class="jumbotron" id="ferris-wheel" style="display: none">
       <div class="container">
         <h1>Ferris Wheel Problem</h1>
         <p>Jacob and Emily ride a ferris wheel at a Math Park in Iligan City.  The wheel has a 16 m diameter with its lowest point  1 m above the ground.  Assume that Jacob and Emily's height ( h ) above the ground is a function h(t) = 9 - 8 cos ( 18t ) where t = 0 represents the lowest point on the wheel and t is measured in seconds.  
-			(a)  Find the height of Jacob and Emily's cart  when t is 10 seconds.
-			a)  11.79 meters  b) 12.79 meters c) 13.79 meters d) 14.79 meters
-			Ans: c
-			      
-			       (b)What is the height of Jacob and Emily's cart when t is 8 seconds ?
-			    a) 2.03 meters    b) 3.03 meters    c) 4.03 meters    d) 5.03 meters
-			        Ans: a
+      (a)  Find the height of Jacob and Emily's cart  when t is 10 seconds.
+      a)  11.79 meters  b) 12.79 meters c) 13.79 meters d) 14.79 meters
+      Ans: c
+            
+             (b)What is the height of Jacob and Emily's cart when t is 8 seconds ?
+          a) 2.03 meters    b) 3.03 meters    c) 4.03 meters    d) 5.03 meters
+              Ans: a
 
-		</p>
+    </p>
         <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Learn more »</a></p>
       </div>
     </div>
@@ -56,8 +92,8 @@
       <div class="container">
         <h1>Car Race Problem</h1>
         <p>The car race has the shape of an ellipse, the length of the major axis from the center to the vertex is 3 m while the length of the minor axis is 2 m.  Find the location of the car of the function x(t) = a cos t and y(t) = b sin t (a) when t = 0. a) x = 0 ,y = 3    b) x = 1, y = 0   c) x = 0, y = 1   d) x=3, y= 0
-			ans: d (b) when t = 30 a) x = 3√3/2, y = 1  b) x = -3√3/2 , y = 1  c) x = 3√3/2, y = -1 d) x = -3√3/2, y = -1  Ans. a 
-  		</p>
+      ans: d (b) when t = 30 a) x = 3√3/2, y = 1  b) x = -3√3/2 , y = 1  c) x = 3√3/2, y = -1 d) x = -3√3/2, y = -1  Ans. a 
+      </p>
         <p><a class="btn btn-primary btn-lg pull-right" href="#" role="button">Learn more »</a></p>
       </div>
     </div>
@@ -67,76 +103,102 @@
         <h1>Carousel Problem</h1>
         <p>The carousel at the Mathematics Park in Iligan City takes 7 minutes to make one full rotation. The minimum and maximum height of horse ride above the ground can be modelled by h(t) = 3(sin 2π/7)(t - 1.75) + 4,</p>
         <p>where t is time in minutes. What is the height of horse ride if t = 3 minutes?</p>
-		<div class="btn-group btn-group-vertical" data-toggle="buttons">
-	        <label class="btn active">
-	          <input type="radio" name='carousel_a' value="a" checked>
-	          	<i class="fa fa-circle-o fa-2x"></i>
-	          	<i class="fa fa-dot-circle-o fa-2x"></i> 
-	          	<span>a) 4 ft</span>
-	        </label>
-	        <label class="btn">
-	          <input type="radio" name='carousel_a' value="b">
-	          	<i class="fa fa-circle-o fa-2x"></i>
-	          	<i class="fa fa-dot-circle-o fa-2x"></i>
-	          	<span>b) 3 ft</span>
-	        </label>
-	        <label class="btn">
-	          <input type="radio" name='carousel_a' value="c">
-	          	<i class="fa fa-circle-o fa-2x"></i>
-	          	<i class="fa fa-dot-circle-o fa-2x"></i>
-	          	<span>c) 2 ft</span>
-	        </label>
-	        <label class="btn">
-	          <input type="radio" name='carousel_a' value="d">
-	          	<i class="fa fa-circle-o fa-2x"></i>
-	          	<i class="fa fa-dot-circle-o fa-2x"></i>
-	          	<span>d) 1 ft</span>
-	        </label>
-	    </div>
-		</p>
+    <div class="btn-group btn-group-vertical" data-toggle="buttons">
+          <label class="btn active">
+            <input type="radio" name='carousel_a' value="a" checked>
+              <i class="fa fa-circle-o fa-2x"></i>
+              <i class="fa fa-dot-circle-o fa-2x"></i> 
+              <span>a) 4 ft</span>
+          </label>
+          <label class="btn">
+            <input type="radio" name='carousel_a' value="b">
+              <i class="fa fa-circle-o fa-2x"></i>
+              <i class="fa fa-dot-circle-o fa-2x"></i>
+              <span>b) 3 ft</span>
+          </label>
+          <label class="btn">
+            <input type="radio" name='carousel_a' value="c">
+              <i class="fa fa-circle-o fa-2x"></i>
+              <i class="fa fa-dot-circle-o fa-2x"></i>
+              <span>c) 2 ft</span>
+          </label>
+          <label class="btn">
+            <input type="radio" name='carousel_a' value="d">
+              <i class="fa fa-circle-o fa-2x"></i>
+              <i class="fa fa-dot-circle-o fa-2x"></i>
+              <span>d) 1 ft</span>
+          </label>
+      </div>
+    </p>
         <p><a class="btn btn-primary btn-lg pull-right" href="#" id="acarousel" role="button">Submit Answer</a></p>
       </div>
     </div>
+
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+  </div>
+
+  <div class="loader">
+    <img src="images/icons/icon-128x128bb.png">
+  </div>
+
+  <!-- Uncomment the line below when ready to test with fake data -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.js"></script>
+  <script src="scripts/app.js" async></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#car').hide();
+      $('#roller-coaster').hide();
+      $('#carousel').hide();
+      $('#ferris-wheel').hide();
+
+      $('#carou').click(function (event) {
+        event.preventDefault();
+        $('#icons').hide();
+        $('#carousel').show();
+      });
+
+      $('#acarousel').click(function (event) {
+        event.preventDefault();
+        var carousel_a = $("input:radio[name=carousel_a]:checked").val();
+        if(carousel_a == 'a'){
+          swal({
+            title: 'Sweet!',
+            type: 'success'
+          }).then(function () {
+            $('#carousel').hide();
+            $('#icons').show();
+          });
+        } else {
+          swal({
+            title: 'Oops!',
+            type: 'error'
+          }).then(function () {
+            $('#carousel').hide();
+            $('#icons').show();
+          });
+        }
+      });
+    });
+
+    setTimeout(function(){
+      $('body').addClass('loaded');
+      $('h1').css('color','#222222');
+    }, 3000);
+
+    setTimeout(function(){
+      $('.loader').fadeOut('slow');
+      $('#icons').delay(100).fadeIn('slow');
+      //$('h1').css('color','#222222');
+    }, 5000);
+  </script>
+
 </body>
-<footer>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.js"></script>
-	<script type="text/javascript">
-		$(function () {
-			$('#car').hide();
-			$('#roller-coaster').hide();
-			$('#carousel').hide();
-			$('#ferris-wheel').hide();
-
-			$('#carou').click(function (event) {
-				event.preventDefault();
-				$('#icons').hide();
-				$('#carousel').show();
-			});
-
-			$('#acarousel').click(function (event) {
-				event.preventDefault();
-				var carousel_a = $("input:radio[name=carousel_a]:checked").val();
-				if(carousel_a == 'a'){
-					swal({
-						title: 'Sweet!',
-						type: 'success'
-					}).then(function () {
-						$('#carousel').hide();
-						$('#icons').show();
-					});
-				} else {
-					swal({
-						title: 'Oops!',
-						type: 'error'
-					}).then(function () {
-						$('#carousel').hide();
-						$('#icons').show();
-					});
-				}
-			});
-		});
-	</script>
-</footer>
 </html>
